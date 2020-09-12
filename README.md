@@ -45,3 +45,15 @@ Jquery 1.7+
     </script>
 </code>
 </pre>
+
+
+# Property
+| Id | Description | Default |
+| --- | --- |--- |
+| label | Div label name | "Select options" |
+| data | Array data. ex> [ {"cd":"cd1","nm":"nm1"}, {"cd":"cd1","nm":"nm1"} ] | "[]"  |
+| height | Popup layer height size | "200px" |
+| width | Popup layer width size | "150px" |
+| list_height | Popup item list's line height | "32px" |
+| text_selectall | Popup 'Select all' text | "Select all" |
+| text_unselectall | Popup 'Unselect all' text  | "Unselect all" |
