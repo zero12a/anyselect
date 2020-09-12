@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <title> anyselect </title>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    
+    <link href="https://raw.githubusercontent.com/zero12a/anyselect/master/dist/anyselect.min.css" rel="stylesheet">
+
+    <!-- Development version -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="UTF-8"></script>
+    <script src="https://raw.githubusercontent.com/zero12a/anyselect/master/dist/anyselect.min.js" charset="UTF-8"></script>
+
+
+<script language="javascript" charset="UTF-8">
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+
+
+    var cfg2 = {
+        label: 'Select options2'
+        ,text_selectall : '전체 선택' 
+        ,text_unselectall : '전체 해제'
+        ,data: [
+            {cd:"cd1", nm:"한글1"}
+            ,{cd:"cd2", nm:"nm2"}
+            ,{cd:"cd3", nm:"nm3"}
+            ,{cd:"cd4", nm:"nm4"}
+            ,{cd:"cd5", nm:"nm5"}
+            ,{cd:"cd6", nm:"nm6"}
+            ,{cd:"cd7", nm:"nm7"}
+            ,{cd:"cd8", nm:"nm8"}
+            ,{cd:"cd9", nm:"nm9"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+        ]
+    };
+
+    var cfg3 = {
+        label: 'Select options3'
+        ,text_selectall : '전체 선택' 
+        ,text_unselectall : '전체 해제'
+        ,data: [
+            {cd:"cd1", nm:"한글1"}
+            ,{cd:"cd2", nm:"nm2"}
+            ,{cd:"cd3", nm:"nm3"}
+            ,{cd:"cd4", nm:"nm4"}
+            ,{cd:"cd5", nm:"nm5"}
+        ]
+    };
+
+
+
+    var objMyselect = new anyselect($("#button2"),cfg2);
+    
+    var objMyselect3 = new anyselect($("#button3"),cfg3);
+
+    $("#btnLoadData2").click(function() {
+        alog("btnSetValue2.click()...........................start");
+        objMyselect.loadData([
+            {cd:"cd1", nm:"nm1"}
+            ,{cd:"cd2", nm:"nm2"}
+            ,{cd:"cd3", nm:"nm3"}
+            ,{cd:"cd4", nm:"nm4"}
+            ,{cd:"cd5", nm:"nm5"}
+            ,{cd:"cd6", nm:"nm6"}
+            ,{cd:"cd7", nm:"nm7"}
+            ,{cd:"cd8", nm:"nm8"}
+            ,{cd:"cd9", nm:"nm9"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd12", nm:"nm12"}
+        ]);
+    });
+    
+    $("#btnSetValue2").click(function() {
+        alog("btnSetValue2.click()...........................start");
+        objMyselect.setValue("cd2,cd3");
+    });
+    
+    
+    $("#btnGetValue2").click(function() {
+        alog("btnGetValue2.click()...........................start");
+        alert(objMyselect.getValue());
+    });
+});
+    
+    
+    
+    
+    function alog(t){
+        if(console)console.log(t);
+    }
+    </script>
+
+</head>
+<body>
+<div style="width:500px;height:100px;background-color:gray">
+
+
+</div>
+
+<div style="width:500px;height:100px;background-color:silver">
+    <div id="button3" style="background-color:yellow;width:150px;">pure btn</div>
+
+</div>
+<div style="width:500px;height:100px;background-color:gray">
+
+    
+<input type="button" id="btnLoadData2" value="loadData2">
+<input type="button" id="btnSetValue2" value="setValue2">
+<input type="button" id="btnGetValue2" value="getValue2">
+
+</div>
+<div style="position:absolute;width:500px;height:100px;background-color:silver">
+    parent position:absolute;
+
+
+     <div id="button2" style="background-color:yellow;width:150px;">pure btn</div>
+
+</div>
+
+</body>
+
+
+
+</html>
+
