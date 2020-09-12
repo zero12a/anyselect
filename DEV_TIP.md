@@ -8,3 +8,6 @@ npm install csso-cli
 
 # release 압축( 루트 폴더 에서 )
 tar -cvzf anyselect.tar.gz dist/anyselect.min*
+
+# readme.md 작성법
+https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks
