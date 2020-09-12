@@ -1,16 +1,15 @@
 /*
-
-
+https://github.com/zero12a/anyselect
 */
-var myframe = myframe || {};
+var anyselect = anyselect || {};
 
-myframe.myselect = function (obj,cfg){
-    alog("myframe.myselect()................................start");
+anyselect = function (obj,cfg){
+    alog("myframe.anyselect()................................start");
 
     var self = this;// Can't use this inside the function
 
     //pop 레이서 생성
-    alog(obj);
+    //alog(obj);
     this.cfg = cfg;
 
     //설정 관련
@@ -18,11 +17,11 @@ myframe.myselect = function (obj,cfg){
     if(this.cfg.data === undefined)this.cfg.data = [];
     if(this.cfg.height === undefined)this.cfg.height = "200px";
     if(this.cfg.width === undefined)this.cfg.width = "150px";
-    if(this.cfg.list_height === undefined)this.cfg.list_height = "22px";
+    if(this.cfg.list_height === undefined)this.cfg.list_height = "32px";
     if(this.cfg.text_selectall === undefined)this.cfg.text_selectall = "Select all";
     if(this.cfg.text_unselectall === undefined)this.cfg.text_unselectall = "Unselect all";
 
-    alog("this.cfg.text_selectall="  + this.cfg.text_selectall);
+    //alog("this.cfg.text_selectall="  + this.cfg.text_selectall);
     
 
     //오브젝트 관련
@@ -37,28 +36,28 @@ myframe.myselect = function (obj,cfg){
     this.pop_chk_id = this.obj_id+ "_chk";
 
 
-    //오브젝트 내부에 텍스트 span오브젝트 생성하기
-    obj.html("<div style='position:absolute;'>" + this.cfg.label + "</div>");
+    //오브젝트 속성 변경하기
+    obj.css("cursor","pointer");
+    obj.css("overflow","hidden");
+    if(obj.css("position") != "static" && console)console.warn("Recommend myframe.anyselect div position is static.");
+
+    //alert(obj.width());
+    //obj.css("width", obj.width()); //가로사이즈 안 늘어나게 고정 시키기
+    obj.css("height", obj.height()); //세로사이즈 안 늘어나게 고정 시키기
+    
+    //오브젝트 내부에 텍스트 child오브젝트 생성하기
+    obj.html("<div style='position:absolute;margin:2px 2px 2px 2px;'>" + this.cfg.label + "</div>");
     alog(obj.children().html());
 
     //팝업 html생성
-    var pop = '<div class="myselect" id="' + this.pop_div_id + '" style="height:' + this.cfg.height + ';width:' + this.cfg.width + ';position:absolute;overflow-y:auto;overflow-x:hidden;">';
-    pop += '<div class="myselectSelectAllDiv" id=' + this.pop_selectall_div_id + ' style="cursor:pointer;text-decoration:underline;">' + this.cfg.text_selectall + '</div>';
-    pop += '<ul id="' + this.pop_ul_id + '" class="myselectUl"></ul>';
+    var pop = '<div class="anyselect" id="' + this.pop_div_id + '" style="height:' + this.cfg.height + ';width:' + this.cfg.width + ';position:absolute;overflow-y:auto;overflow-x:hidden;">';
+    pop += '<div class="anyselectSelectAllDiv" id=' + this.pop_selectall_div_id + ' style="line-height:' + this.cfg.list_height + ';vertical-align: middle;height:' + this.cfg.list_height + ';cursor:pointer;text-decoration:underline;">' + this.cfg.text_selectall + '</div>';
+    pop += '<ul id="' + this.pop_ul_id + '" class="anyselectUl"></ul>';
     pop += '</div>';
 
     $('body').append(pop);
 
-    //check all event
-    /*
-    $("#" + this.pop_selectall_chk_id).click(function(e){
-        //e.preventDefault();
-        alog('chkSelectAllChk.click()..........................start');
-        $("input[id=" + self.pop_chk_id + "").prop('checked', $(this).prop('checked'));
 
-        self.makeLabel();
-    });
-    */
 
     //check all event
     $("#" + this.pop_selectall_div_id).click(function(e){
@@ -131,7 +130,7 @@ myframe.myselect = function (obj,cfg){
         for(j=0;j<t.length;j++){
             cd = t[j].cd;
             nm = t[j].nm;
-            $("#" + this.pop_ul_id).append('<li class="myclassLi" id="' + this.pop_li_id + '" style="height:' + this.cfg.list_height + ';cursor:pointer;"><input id="' + this.pop_chk_id + '" value="' + cd + '" type="checkbox">' + nm + '</li>');
+            $("#" + this.pop_ul_id).append('<li class="myclassLi" id="' + this.pop_li_id + '" style="line-height:' + this.cfg.list_height + ';vertical-align: middle;height:' + this.cfg.list_height + ';cursor:pointer;"><input id="' + this.pop_chk_id + '" value="' + cd + '" type="checkbox">' + nm + '</li>');
         }
 
         //li click event

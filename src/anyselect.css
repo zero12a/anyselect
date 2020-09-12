@@ -1,0 +1,39 @@
+.anyselect {
+    background-color:silver ;
+    color: black;
+    padding: 5px 0px 3px 0px;
+    /*border-radius: 4px;*/
+    font-size: 12px;
+    border: solid 1px gray;
+    display: none;
+}
+
+.anyselect[data-show] {
+    display: block;
+}
+
+.anyselectUl{
+    float:none;
+    list-style-type: none;
+    padding: 0 0 0 0;
+    margin: 3px 0 5px 0;
+    column-count: 1; 
+    column-gap: 0px;
+}
+.anyselectLi {
+}
+
+.anyselectLi:hover {
+    background-color: gray;
+}
+
+.anyselectSelectAllDiv {
+    height: 19px;
+    line-height: 19px;
+    vertical-align: middle;
+    padding: 0px 0px 0px 5px;
+}
+
+.anyselectSelectAllDiv:hover {
+    background-color: gray;
+}
