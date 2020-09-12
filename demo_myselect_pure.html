@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <title> myselect </title>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <!-- Development version -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="UTF-8"></script>
+    <script src="demo_myselect_pure.js?11" charset="UTF-8"></script>
+    <style>
+        .myselect {
+            background-color:silver ;
+            color: black;
+            padding: 5px 0px 3px 0px;
+            /*border-radius: 4px;*/
+            font-size: 12px;
+            border: solid 1px gray;
+            display: none;
+        }
+
+        .myselect[data-show] {
+            display: block;
+        }
+
+        .myselectUl{
+            float:none;
+            list-style-type: none;
+            padding: 0 0 0 0;
+            margin: 3px 0 3px 0;
+            column-count: 1; 
+            column-gap: 0px;
+        }
+        .myclassLi {
+        }
+
+        .myclassLi:hover {
+            background-color: gray;
+        }
+
+        .myselectSelectAllDiv{
+            height: 19px;
+            line-height: 19px;
+            vertical-align: middle;
+            padding: 0px 0px 0px 5px;
+            
+        }
+        .myselectSelectAllDiv:hover {
+            background-color: gray;
+        }
+    </style>
+
+
+
+<script language="javascript" charset="UTF-8">
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+
+
+    var cfg = {
+        label: 'Select options'
+        ,text_selectall : '전체 선택' 
+        ,text_unselectall : '전체 해제'
+        ,data: [
+            {cd:"cd1", nm:"한글1"}
+            ,{cd:"cd2", nm:"nm2"}
+            ,{cd:"cd3", nm:"nm3"}
+            ,{cd:"cd4", nm:"nm4"}
+            ,{cd:"cd5", nm:"nm5"}
+            ,{cd:"cd6", nm:"nm6"}
+            ,{cd:"cd7", nm:"nm7"}
+            ,{cd:"cd8", nm:"nm8"}
+            ,{cd:"cd9", nm:"nm9"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+        ]
+    };
+
+
+
+    var objMyselect = new myframe.myselect($("#button2"),cfg);
+    
+    $("#btnLoadData2").click(function() {
+        alog("btnSetValue2.click()...........................start");
+        objMyselect.loadData([
+            {cd:"cd1", nm:"nm1"}
+            ,{cd:"cd2", nm:"nm2"}
+            ,{cd:"cd3", nm:"nm3"}
+            ,{cd:"cd4", nm:"nm4"}
+            ,{cd:"cd5", nm:"nm5"}
+            ,{cd:"cd6", nm:"nm6"}
+            ,{cd:"cd7", nm:"nm7"}
+            ,{cd:"cd8", nm:"nm8"}
+            ,{cd:"cd9", nm:"nm9"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd10", nm:"nm10"}
+            ,{cd:"cd11", nm:"nm11"}
+            ,{cd:"cd12", nm:"nm12"}
+        ]);
+    });
+    
+    $("#btnSetValue2").click(function() {
+        alog("btnSetValue2.click()...........................start");
+        objMyselect.setValue("cd2,cd3");
+    });
+    
+    
+    $("#btnGetValue2").click(function() {
+        alog("btnGetValue2.click()...........................start");
+        alert(objMyselect.getValue());
+    });
+});
+    
+    
+    
+    
+    function alog(t){
+        if(console)console.log(t);
+    }
+    </script>
+
+</head>
+<body>
+<div style="width:500px;height:100px;background-color:gray">
+
+
+</div>
+
+<div style="width:500px;height:100px;background-color:silver">
+
+
+</div>
+<div style="width:500px;height:100px;background-color:gray">
+
+    
+<input type="button" id="btnLoadData2" value="loadData2">
+<input type="button" id="btnSetValue2" value="setValue2">
+<input type="button" id="btnGetValue2" value="getValue2">
+
+</div>
+<div style="position:relative;width:500px;height:100px;background-color:silver">
+
+
+     <div id="button2" style="cursor:pointer;background-color:yellow;width:150px;height:22px;overflow:hidden;">pure btn</div>
+
+</div>
+
+</body>
+
+
+
+</html>
+
