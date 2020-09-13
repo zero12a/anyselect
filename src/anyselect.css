@@ -50,7 +50,7 @@ version : 1.0.1
 }
 .anyselectLi {
     vertical-align: middle;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .anyselectLi:hover {

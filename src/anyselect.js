@@ -46,7 +46,7 @@ anyselect = function (obj,cfg){
 
     //alert(obj.width());
     //obj.css("width", obj.width()); //가로사이즈 안 늘어나게 고정 시키기
-    obj.css("height", obj.height()); //세로사이즈 안 늘어나게 고정 시키기
+    //obj.css("height", obj.height()); //세로사이즈 안 늘어나게 고정 시키기
     
     //오브젝트 내부에 텍스트 child오브젝트 생성하기
     obj.html("<div class='anyselectLabel'>" + this.cfg.label + "</div>");
