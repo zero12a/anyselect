@@ -2,6 +2,8 @@
 
 demo : https://zero12a.github.io/anyselect/
 
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+
 # Dependency
 Jquery 1.7+
 
