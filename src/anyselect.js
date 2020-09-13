@@ -50,7 +50,7 @@ anyselect = function (obj,cfg){
     alog(obj.children().html());
 
     //팝업 html생성
-    var pop = '<div class="anyselect" id="' + this.pop_div_id + '" style="height:' + this.cfg.height + ';width:' + this.cfg.width + ';position:absolute;overflow-y:auto;overflow-x:hidden;">';
+    var pop = '<div class="anyselect" id="' + this.pop_div_id + '" style="height:' + this.cfg.height + ';width:' + this.cfg.width + ';position:absolute;overflow-y:auto;overflow-x:hidden;z-index:9999;">';
     pop += '<div class="anyselectSelectAllDiv" id=' + this.pop_selectall_div_id + ' style="line-height:' + this.cfg.list_height + ';vertical-align: middle;height:' + this.cfg.list_height + ';cursor:pointer;text-decoration:underline;">' + this.cfg.text_selectall + '</div>';
     pop += '<ul id="' + this.pop_ul_id + '" class="anyselectUl"></ul>';
     pop += '</div>';
