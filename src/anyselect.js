@@ -1,7 +1,7 @@
 /*
 https://github.com/zero12a/anyselect
 
-version : 1.0.2
+version : 1.0.3
 */
 var anyselect = anyselect || {};
 
@@ -42,7 +42,6 @@ anyselect = function (obj,cfg){
     obj.addClass( 'anyselectParent' );
     obj.css("cursor","pointer");
     obj.css("overflow","hidden");
-    if(obj.css("position") != "static" && console)console.warn("Recommend myframe.anyselect div position is static.");
 
     //alert(obj.width());
     //obj.css("width", obj.width()); //가로사이즈 안 늘어나게 고정 시키기

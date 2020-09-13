@@ -1,7 +1,7 @@
 /*
 https://github.com/zero12a/anyselect
 
-version : 1.0.2
+version : 1.0.3
 */
 
 /*
@@ -15,7 +15,7 @@ version : 1.0.2
 
 .anyselectLabel {
     position: absolute;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 3px;
 }
 
 
