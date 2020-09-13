@@ -1,7 +1,7 @@
 /*
 https://github.com/zero12a/anyselect
 
-version : 1.0.1
+version : 1.0.2
 */
 var anyselect = anyselect || {};
 
@@ -46,11 +46,12 @@ anyselect = function (obj,cfg){
 
     //alert(obj.width());
     //obj.css("width", obj.width()); //가로사이즈 안 늘어나게 고정 시키기
-    //obj.css("height", obj.height()); //세로사이즈 안 늘어나게 고정 시키기
+    //alert(obj.height());
+    obj.css("height", (obj.height()+2)); //세로사이즈 안 늘어나게 고정 시키기
     
     //오브젝트 내부에 텍스트 child오브젝트 생성하기
     obj.html("<div class='anyselectLabel'>" + this.cfg.label + "</div>");
-    alog(obj.children().html());
+    //alog(obj.children().html());
 
     //팝업 html생성
     var pop = '<div class="anyselect" id="' + this.pop_div_id + '" style="height:' + this.cfg.height + ';width:' + this.cfg.width + ';">';
@@ -91,8 +92,8 @@ anyselect = function (obj,cfg){
             this.obj.children().html(this.getLabel());
         }
 
-        alog("obj.width = " + this.obj.width() + ", obj.child.width = " + this.obj.children().width());
-        if(this.obj.width() < this.obj.children().width()){
+        alog("obj.width = " + this.obj.width() + ", obj.child.width = " + this.obj.children().width() + ", obj.child.height = " + this.obj.children().height());
+        if(this.obj.width() < this.obj.children().width() || this.obj.children().height() > this.obj.height()){
             var label = this.getSelectedCount() + " selected.";
             this.obj.children().html(label);
         }
