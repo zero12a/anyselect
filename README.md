@@ -2,8 +2,7 @@
 
 demo : https://zero12a.github.io/anyselect/
 
-[![GitHub release](https://img.shields.io/github/release/zero12a/anyselect.svg)](https://GitHub.com/zero12a/anyselect/releases/)
-
+[![GitHub release](https://img.shields.io/github/release/zero12a/anyselect.svg)](https://GitHub.com/zero12a/anyselect/releases/) [![Github all releases](https://img.shields.io/github/downloads/zero12a/anyselect/total.svg)](https://GitHub.com/zero12a/anyselect/releases/)
 
 # Dependency
 Jquery 1.7+
