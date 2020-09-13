@@ -1,6 +1,6 @@
 /*
 https://github.com/zero12a/anyselect
 
-anyselect version : 1.0.0
+version : 1.0.1
 */
-.anyselect{background-color:silver;color:#000;padding:5px 0 3px;font-size:12px;border:solid 1px gray;display:none}.anyselect[data-show]{display:block}.anyselectUl{float:none;list-style-type:none;padding:0;margin:3px 0 5px;column-count:1;column-gap:0}.anyselectLi:hover,.anyselectSelectAllDiv:hover{background-color:gray}.anyselectSelectAllDiv{height:19px;line-height:19px;vertical-align:middle;padding:0 0 0 5px}
+.anyselectParent{background-color:#fff;padding:0;border:solid 1px gray}.anyselectLabel{position:absolute;margin:0}.anyselect{background-color:silver;color:#000;padding:5px 0 3px;font-size:12px;border:solid 1px gray;display:none;position:absolute;overflow-y:auto;overflow-x:hidden;z-index:9999}.anyselect[data-show]{display:block}.anyselectUl{float:none;list-style-type:none;padding:0;margin:3px 0 5px;column-count:1;column-gap:0}.anyselectLi,.anyselectSelectAllDiv{vertical-align:middle;cursor:pointer}.anyselectLi:hover,.anyselectSelectAllDiv:hover{background-color:gray}.anyselectSelectAllDiv{height:19px;line-height:19px;padding:0 0 0 5px;text-decoration:underline}
