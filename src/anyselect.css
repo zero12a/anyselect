@@ -1,3 +1,21 @@
+/*
+부모 객체
+*/
+.anyselectParent {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    border: solid 1px gray;
+}
+
+.anyselectLabel {
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+}
+
+
+/*
+팝업 객체
+*/
 .anyselect {
     background-color:silver ;
     color: black;
@@ -6,6 +24,10 @@
     font-size: 12px;
     border: solid 1px gray;
     display: none;
+    position:absolute;
+    overflow-y:auto;
+    overflow-x:hidden;
+    z-index:9999;
 }
 
 .anyselect[data-show] {
@@ -21,6 +43,8 @@
     column-gap: 0px;
 }
 .anyselectLi {
+    vertical-align: middle;
+    cursor:pointer;
 }
 
 .anyselectLi:hover {
@@ -32,6 +56,8 @@
     line-height: 19px;
     vertical-align: middle;
     padding: 0px 0px 0px 5px;
+    cursor:pointer;
+    text-decoration:underline;
 }
 
 .anyselectSelectAllDiv:hover {
