@@ -1,6 +1,6 @@
 # anyselect
 
-[![GitHub release](https://img.shields.io/github/release/zero12a/anyselect.svg)](https://GitHub.com/zero12a/anyselect/releases/) [![Github all releases](https://img.shields.io/github/downloads/zero12a/anyselect/total.svg)](https://GitHub.com/zero12a/anyselect/releases/) [![Only 2 Kb](https://badge-size.herokuapp.com/zero12a/anyselect/master/dist/anyselect.min.js)](https://github.com/zero12a/anyselect/master/dist/anyselect.min.js)
+[![GitHub release](https://img.shields.io/github/release/zero12a/anyselect.svg)](https://GitHub.com/zero12a/anyselect/releases/) [![Github all releases](https://img.shields.io/github/downloads/zero12a/anyselect/total.svg)](https://GitHub.com/zero12a/anyselect/releases/) [![Only 5 Kb](https://badge-size.herokuapp.com/zero12a/anyselect/master/dist/anyselect.min.js)](https://github.com/zero12a/anyselect/master/dist/anyselect.min.js)
 
 
 demo : https://zero12a.github.io/anyselect/
